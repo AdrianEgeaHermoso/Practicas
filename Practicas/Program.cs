@@ -54,9 +54,13 @@ namespace Practicas
                 {
                     Console.WriteLine("Puedes conducir");
                 }
-                else 
+                else if(carnet.Equals("N"))
                 {
                     Console.WriteLine("No puedes conducir");
+                }
+                else
+                {
+                    Console.WriteLine("Dato introducido incorrecto, debe introducir S para decir 'si' o N para decir 'no'");
                 }
             }
         }
