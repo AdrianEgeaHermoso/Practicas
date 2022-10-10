@@ -35,6 +35,7 @@ namespace Practicas
         /*
          * PRACTICA 2
          */
+        #region
         static void Practica2()
           
         {
@@ -59,7 +60,7 @@ namespace Practicas
                 }
             }
         }
-
+        #endregion
         /*
          * PRACTICA 3
          */
