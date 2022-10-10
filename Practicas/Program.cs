@@ -38,7 +38,7 @@ namespace Practicas
         static void Practica2()
           
         {
-            Console.WriteLine("Introduzca su edad");
+            Console.WriteLine("Introduzca su edad: ");
             int edad = int.Parse(Console.ReadLine());
 
             if (edad < 18)
