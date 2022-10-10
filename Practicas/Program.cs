@@ -8,23 +8,21 @@ namespace Practicas
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            /* comentarios
-             * de varias lineas
-             * 
-             */
-            Console.WriteLine("¡¡¡¡¡Hola Mundo!"); // comentarios
 
-            int edad = 25;
-            int alumnos = 24;
-            string curso = "DEINT";
+            Practica1();
+            // Practica2();
+            // Practica3();
+        }
 
-            Console.WriteLine($"Tu edad es de {edad} años");
-            Console.WriteLine("Tu edad es de {0}", edad);
-            Console.WriteLine("Tu edad es de " + edad + " años");
-            Console.WriteLine("En la clase de {1} alumnos hay personas con {0} años ", edad, alumnos);
-
+        /*
+         * PRACTICA 1
+         */
+        #region
+        static void Practica1()
+        {
             Console.WriteLine("Introduce el radio: ");
             int num = int.Parse(Console.ReadLine());
             const double PI = 3.14;
@@ -32,5 +30,24 @@ namespace Practicas
             Console.WriteLine($"El area del circulo del radio {num} es {resultado}");
 
         }
+        #endregion
+
+        /*
+         * PRACTICA 2
+         */
+        static void Practica2()
+        {
+            Console.WriteLine("Practica 2");
+        }
+
+        /*
+         * PRACTICA 3
+         */
+        static void Practica3()
+        {
+            Console.WriteLine("Practica 3");
+        }
+
+
     }
 }
