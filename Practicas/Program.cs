@@ -12,8 +12,8 @@ namespace Practicas
         static void Main(string[] args)
         {
 
-            Practica1();
-            // Practica2();
+            //Practica1();
+            Practica2();
             // Practica3();
         }
 
@@ -36,8 +36,28 @@ namespace Practicas
          * PRACTICA 2
          */
         static void Practica2()
+          
         {
-            Console.WriteLine("Practica 2");
+            Console.WriteLine("Introduzca su edad");
+            int edad = int.Parse(Console.ReadLine());
+
+            if (edad < 18)
+            {
+                Console.WriteLine("Eres menor de edad, no puedes conducir");
+            }
+            else 
+            {
+                Console.WriteLine("¿Tienes carnet de conducir? Introduce S(si) o N(no)");
+                String carnet = Console.ReadLine();
+                if(carnet.Equals("S")) 
+                {
+                    Console.WriteLine("Puedes conducir");
+                }
+                else 
+                {
+                    Console.WriteLine("No puedes conducir");
+                }
+            }
         }
 
         /*
