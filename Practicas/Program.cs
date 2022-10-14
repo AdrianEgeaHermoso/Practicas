@@ -12,9 +12,9 @@ namespace Practicas
         static void Main(string[] args)
         {
 
-            //Practica1();
-            Practica2();
-            // Practica3();
+            // Practica1();
+            // Practica2();
+            Practica3();
         }
 
         /*
@@ -37,7 +37,7 @@ namespace Practicas
          */
         #region
         static void Practica2()
-          
+
         {
             Console.WriteLine("Introduzca su edad: ");
             int edad = int.Parse(Console.ReadLine());
@@ -46,15 +46,15 @@ namespace Practicas
             {
                 Console.WriteLine("Eres menor de edad, no puedes conducir");
             }
-            else 
+            else
             {
                 Console.WriteLine("¿Tienes carnet de conducir? Introduce S(si) o N(no)");
                 String carnet = Console.ReadLine();
-                if(carnet.Equals("S")) 
+                if (carnet.Equals("S"))
                 {
                     Console.WriteLine("Puedes conducir");
                 }
-                else if(carnet.Equals("N"))
+                else if (carnet.Equals("N"))
                 {
                     Console.WriteLine("No puedes conducir");
                 }
@@ -70,7 +70,24 @@ namespace Practicas
          */
         static void Practica3()
         {
-            Console.WriteLine("Practica 3");
+            String respuesta;
+
+            do
+            {
+                Console.WriteLine("Quieres entrar?: 'S' o 'N'");
+                respuesta = Console.ReadLine().ToUpper();
+
+                if (respuesta.Equals("S"))
+                { 
+                    Console.WriteLine("Bienvenido");
+                }else if (respuesta.Equals("N"))
+                {
+                    Console.WriteLine("Adios");
+                }else
+                { 
+                    Console.WriteLine("Debe teclear S o N");
+                }
+            } while (!respuesta.Equals("S") && !respuesta.Equals("N"));
         }
 
 
