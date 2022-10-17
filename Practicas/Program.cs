@@ -8,13 +8,21 @@ namespace Practicas
 {
     internal class Program
     {
+        const String REPETIR_BUCLE = "N";
+        const String NO_REPETIR_BUCLE = "S";
+
 
         static void Main(string[] args)
         {
 
             // Practica1();
             // Practica2();
-            Practica3();
+            // Practica3();
+            // Practica4();
+            Excepciones();
+
+
+
         }
 
         /*
@@ -65,12 +73,56 @@ namespace Practicas
             }
         }
         #endregion
+
         /*
          * PRACTICA 3
          */
+
+        #region
         static void Practica3()
         {
-            String respuesta;
+            string respuesta = string.Empty;
+
+
+
+            respuesta = LeerRespuesta();
+
+            while (String.Equals(respuesta, REPETIR_BUCLE))
+            {
+                respuesta = LeerRespuesta();
+            }
+
+            Console.WriteLine("Has salido del bucle");
+        }
+
+        static string LeerRespuesta()
+        {
+            String respuesta = String.Empty;
+
+
+            Console.WriteLine("Quieres entrar al bucle? (S/N)");
+            respuesta = Console.ReadLine().ToUpper();
+
+            while (!respuesta.Equals(REPETIR_BUCLE) && !respuesta.Equals(NO_REPETIR_BUCLE))
+            {
+                Console.WriteLine("Debes introducir N o S");
+                respuesta = Console.ReadLine().ToUpper();
+            }
+
+            return respuesta;
+        }
+
+        #endregion
+
+
+        /*
+         * PRACTICA 4
+         */
+
+        #region
+        static void Practica4()
+        {
+            String respuesta = String.Empty;
 
             do
             {
@@ -90,6 +142,31 @@ namespace Practicas
             } while (!respuesta.Equals("S") && !respuesta.Equals("N"));
         }
 
+        #endregion
+
+
+        /*
+         * EXCEPCIONES
+         */
+
+        static void Excepciones()
+            
+        {
+            try
+            {
+                Console.WriteLine("Introduce un numero");
+                int valor = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Se ha leido {valor}");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("El formato no es correcto");
+            }
+            catch(OverflowException ex)
+            {
+                Console.WriteLine("El numero introducido es demasiado grande");
+            }
+        }
 
     }
 }
