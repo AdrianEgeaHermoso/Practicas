@@ -8,8 +8,8 @@ namespace Practicas
 {
     internal class Program
     {
-        const String REPETIR_BUCLE = "N";
-        const String NO_REPETIR_BUCLE = "S";
+        const String REPETIR_BUCLE = "S";
+        const String NO_REPETIR_BUCLE = "N";
 
 
         static void Main(string[] args)
@@ -19,7 +19,7 @@ namespace Practicas
             // Practica2();
             // Practica3();
             // Practica4();
-            Excepciones();
+             Excepciones();
 
 
 
@@ -160,13 +160,16 @@ namespace Practicas
             }
             catch (FormatException ex)
             {
-                Console.WriteLine("El formato no es correcto");
+                Console.WriteLine(ex.Message);
             }
             catch(OverflowException ex)
             {
                 Console.WriteLine("El numero introducido es demasiado grande");
             }
         }
+
+
+
 
     }
 }
