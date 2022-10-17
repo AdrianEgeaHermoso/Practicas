@@ -19,7 +19,8 @@ namespace Practicas
             // Practica2();
             // Practica3();
             // Practica4();
-             Excepciones();
+            // Excepciones();
+            Practica5();
 
 
 
@@ -148,7 +149,7 @@ namespace Practicas
         /*
          * EXCEPCIONES
          */
-
+        #region
         static void Excepciones()
             
         {
@@ -166,8 +167,50 @@ namespace Practicas
             {
                 Console.WriteLine("El numero introducido es demasiado grande");
             }
+            finally
+            {
+                Console.WriteLine("Fin del metodo");
+            }
+            //no dejar archivos abiertos ni conexiones
         }
+        #endregion
 
+
+        /*
+         * PRACTICA 5
+         */
+
+        static void Practica5()
+        {
+            const string PATH = @"E:\Visual\source\repos\practica5.txt";
+
+            System.IO.StreamReader archivo = null;
+            string linea = string.Empty;
+
+            try
+            {
+                archivo = new System.IO.StreamReader(PATH);
+                linea = archivo.ReadLine();
+                while (!String.IsNullOrEmpty(linea))
+                {
+                    Console.WriteLine(linea);
+                    linea = archivo.ReadLine();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if(archivo != null)
+                {
+                    archivo.Close();
+                }
+                Console.WriteLine("Conexion en el fichero cerrada");
+            }
+        }
 
 
 
